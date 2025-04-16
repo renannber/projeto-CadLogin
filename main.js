@@ -40,3 +40,19 @@ function criaLista(){
         // o + é para juntar tudo 
     }
 }
+
+//Função para excluir o nome da lista ]
+
+function excluir(i){
+    dadosLista.splice((i-1), 1);
+    document.getElementById('tabela').deleteRow(i);
+    console.log (dadosLista);
+
+// splice altera o conteudo de uma lista enquanto 
+}
+// Função para editar o nome da lista 
+function editar(i){
+    document.getElementById('nomeUser').value = dadosLista[(i - 1)];
+    dadosLista.splice(dadosLista[(i - 1 )], 1 );
+
+}
