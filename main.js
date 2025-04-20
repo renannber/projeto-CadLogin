@@ -32,10 +32,10 @@ function salvarUser(){
 // Funçao para preencher a lista de cadastro 
 
 function criaLista(){
-    let tabela = "<tr> <th>Nome</th> <th>Ações </th> </tr>";
+    let tabela ="<tr><td> Nome </td><th> Ações </td></tr>";
     for(let i = 0; i <= (dadosLista.length -1);i++){
-        tabela += "<tr> <td>" + dadosLista [i] + "</td><td><button class= 'btn btn-warning' onclick='editar(this.parentNode.parent.Node.rowIndex)' <Editar >/button ><Excluir</button ></td> </tr>";
-        document.getElementById('tabela').innerHTML = tabela; 
+        tabela += "<tr><td>" + dadosLista [i] + "</td><td><button class= 'btn btn-warning'onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</button><button class='btn btn-danger' onclick='excluir(this.parentNode.parentNode.rowlndex)'>Excluir</button></td><tr>";
+         document.getElementById('tabela').innerHTML = tabela; 
         //+= é para o que tiver dentro da tabela não vai alterar o que tem na tabela e vai adicionar 
         // o + é para juntar tudo 
     }
@@ -53,6 +53,6 @@ function excluir(i){
 // Função para editar o nome da lista 
 function editar(i){
     document.getElementById('nomeUser').value = dadosLista[(i - 1)];
-    dadosLista.splice(dadosLista[(i - 1 )], 1 );
+    dadosLista.splice((i - 1), 1 );
 
 }
