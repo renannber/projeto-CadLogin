@@ -34,7 +34,7 @@ function salvarUser(){
 function criaLista(){
     let tabela = "<tr> <th>Nome</th> <th>Ações </th> </tr>";
     for(let i = 0; i <= (dadosLista.length -1);i++){
-        tabela += "<tr> <td>" + dadosLista [i] + "</td> <td> <button > <Editar >/button ><Excluir</button ></td> </tr>";
+        tabela += "<tr> <td>" + dadosLista [i] + "</td><td><button class= 'btn btn-warning' onclick='editar(this.parentNode.parent.Node.rowIndex)' <Editar >/button ><Excluir</button ></td> </tr>";
         document.getElementById('tabela').innerHTML = tabela; 
         //+= é para o que tiver dentro da tabela não vai alterar o que tem na tabela e vai adicionar 
         // o + é para juntar tudo 
